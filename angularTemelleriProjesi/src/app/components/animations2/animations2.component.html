@@ -1,0 +1,11 @@
+<h3>Animasyon boyutunu değiştir</h3>
+<div class="container">
+  <div class = "row">
+    <div class="col-md-4">
+      <button (click)="changeStatus()" class="btn btn-dark">Boyutu değiştir</button>
+    </div>
+    <div class="col-md-8">
+      <div [@changeDivDimension]=currentStatus></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/reactive-form" routerLinkActive="active" aria-current="page">Reactive-Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/http" routerLinkActive="active" aria-current="page">HTTP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink] = "['/home']" [queryParams] = "{success: true}" routerLinkActive="active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink] = "['/profile', 1]" routerLinkActive="active" aria-current="page">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink = "/animasyon" routerLinkActive="active" aria-current="page">Animasyon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink = "/animasyon2" routerLinkActive="active" aria-current="page">Animasyon2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink = "/contact-details" routerLinkActive="active" aria-current="page">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink = "/parent" routerLinkActive="active" aria-current="page">Contact2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink = "/about" routerLinkActive="active" aria-current="page">About</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

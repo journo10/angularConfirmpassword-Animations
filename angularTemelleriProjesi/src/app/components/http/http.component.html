@@ -1,0 +1,75 @@
+<!-- Post -->
+<div class="container mt-3 mb-5">
+  <div class="col-md-6 mx-auto">
+    <form class="d-flex">
+      <input class="form-control me-sm-2" #pText (keyup.enter)="addPost(pText)" type="text" placeholder="Ara" />
+      <button class="btn btn-success my-2 my-sm-0" (click)="addPost(pText)" type="button">Ekle</button>
+    </form>
+  </div>
+</div>
+
+<!-- Get Request -->
+<div class="container col-md-12">
+  <h3 class="text-danger">Get Request</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-9">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">PostId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Body</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let clist of commentList; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{clist.postId}}</td>
+            <td>{{clist.name}}</td>
+            <td>{{clist.email}}</td>
+            <td>{{clist.body}}</td>
+            <td>
+              <button (click)="clearComment(clist)" class="btn btn-danger">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Get request with parameters -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <h3 class="text-danger">Get request with parameters</h3>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">UserId</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let plist of postList; let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{plist.userId}}</td>
+            <td>{{plist.title}}</td>
+            <td>{{plist.body}}</td>
+            <td >
+              <button (click)="clearPost(plist)" class="btn btn-danger">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->

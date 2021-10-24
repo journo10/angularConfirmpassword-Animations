@@ -1,0 +1,11 @@
+<form>
+  <h3 class="text-danger">Parent Component</h3>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="form-label">Parent Component:</label>
+      <input type="text" class="form-control" #pcomponent (keyup)="0"/>
+    </div>
+  </div>
+  <p>Child component değeri: {{ CData }}</p>
+</form>
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>

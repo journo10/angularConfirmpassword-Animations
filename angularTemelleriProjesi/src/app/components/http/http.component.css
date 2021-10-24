@@ -1,0 +1,13 @@
+h3 {
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.row{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}

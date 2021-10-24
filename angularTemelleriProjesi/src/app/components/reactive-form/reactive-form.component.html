@@ -1,0 +1,53 @@
+<body class="text-center mt-3">
+  <main class="form-signin">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 fw-normal text-danger">Giriş Yap</h1>
+      <hr />
+      <!-- Email -->
+      <div class="form-floating">
+        <input formControlName="email" type="email" class="form-control mt-1" id="floatingInput"
+          placeholder="name@example.com" />
+        <div class="text-danger" *ngIf="submitted && f.email.errors">
+          <small *ngIf="f.email.errors.required">*Email zorunludur.</small>
+          <small *ngIf="f['email'].errors.pattern">Geçerli bir email biçimi olmalıdır.</small>
+        </div>
+        <label for="floatingInput">Email</label>
+      </div>
+      <!-- Password -->
+      <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control mt-1" id="floatingPassword"
+          placeholder="Password" />
+        <div class="text-danger" *ngIf="submitted && f.password.errors">
+          <small *ngIf="f.password.errors.required">*Şifre zorunludur.</small>
+          <p *ngIf="f.password.errors.minlength">*Minimum 5 karakter giriniz.</p>
+        </div>
+        <label for="floatingPassword">Şifre</label>
+      </div>
+      <!-- Şifre Onayla -->
+      <div class="form-floating">
+        <input formControlName="confirmpassword" type="password" class="form-control mt-1" id="floatingconfirmpassword"
+          placeholder="Password" />
+        <div class="text-danger" *ngIf="submitted && f.confirmpassword.errors">
+          <small *ngIf="f.confirmpassword.errors.required">*Şifre onayı zorunludur.</small>
+          <p *ngIf="f.confirmpassword.errors.MustMatch">*Onay şifresi eşleşmiyor.</p>
+        </div>
+        <label for="floatingPassword">Şifre Onayla</label>
+      </div>
+      <!-- Checkbox -->
+      <div class="form-check">
+        <input formControlName="checkbox" (change)="ch($event.target)" class="form-check-input" value="1" type="checkbox" id="flexCheckDefault"/>
+      </div>
+      <!-- Yorum -->
+      <div class="form-floating">
+        <textarea formControlName="comment" class="form-control mt-1" placeholder="Comment"
+          id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Yorum</label>
+        <div class="text-danger" *ngIf="submitted && f.comment.errors">
+          <small *ngIf="f.comment.errors.required">*Yorum zorunludur.</small>
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="w-100 btn btn-outline-dark mt-2" type="submit">Giriş Yap</button>
+    </form>
+  </main>
+</body>

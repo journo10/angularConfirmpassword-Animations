@@ -1,0 +1,12 @@
+<div class="contact-details">
+  <h1>COMPONENTLER ARASI İLETİŞİM</h1>
+  <p> <strong>Parent componentten => </strong>Üst componenttir.</p><hr>
+  <p> <strong>Child component => </strong>Alt component,çocuk componenttir. </p><hr>
+  <p> <strong> @Input => </strong>Parent componentten child componente veri göndermek için kullanılır.
+  </p><hr>
+  <p> <strong> @Output => </strong>Child componentteki bilgiyi parent componente göndermek için
+    kullanılır.
+  </p><hr>
+
+  <app-contact [clapCount]="clap" (changeClap)="clickClap()"></app-contact>
+</div>

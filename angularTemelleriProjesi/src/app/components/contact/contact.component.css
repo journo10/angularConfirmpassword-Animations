@@ -1,0 +1,18 @@
+.clap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    }
+  svg{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  .count {
+    font-weight: 700;
+  }
+  .clap:hover{
+    transition: .5s;
+    padding-left: 5px;
+    color:#ff0000
+  }
